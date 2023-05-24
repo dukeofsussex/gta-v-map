@@ -30,7 +30,7 @@ const { base, overlay }: Config = process.env.CONFIG as unknown as Config;
 
 function layerConversion(l: Record<string, TileLayer>, layer: Omit<ConfigOptions, 'bgColour'>) {
   // eslint-disable-next-line no-param-reassign
-  l[layer.id] = tileLayer(layer.urlTemplate, {
+  l[layer.id] = tileLayer(`${window.location.href}${layer.urlTemplate}`, {
     ...layer,
     attribution: `&copy; <a href="https://www.rockstargames.com/gta-v" target="_blank">Rockstar Games</a> | ${layer.attribution}`,
     bounds: [
