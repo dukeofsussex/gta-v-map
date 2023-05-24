@@ -65,7 +65,13 @@ export default function createMap(node: HTMLElement) {
   const drawingLayer = new FeatureGroup();
   mapDisplay.addLayer(drawingLayer);
 
-  mapDisplay.addControl(new Control.Layers(baseLayers, { Drawing: drawingLayer, ...overlayLayers }))
+  mapDisplay.addControl(new Control.Layers(
+    baseLayers,
+    { Drawing: drawingLayer, ...overlayLayers },
+    {
+      position: 'bottomright',
+    },
+  ))
     .addControl(new Control.Scale());
 
   const drawControls = new Control.Draw({

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import createMap from '$lib/map';
+  import Octocat from './Octocat.svelte';
 
   let mapNode: HTMLElement;
 
@@ -13,6 +14,7 @@
   <title>GTA V Map</title>
 </svelte:head>
 
+<Octocat />
 <section id="map"
     bind:this={mapNode}/>
 
