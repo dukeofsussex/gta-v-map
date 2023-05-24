@@ -10,10 +10,6 @@
   });
 </script>
 
-<svelte:head>
-  <title>GTA V Map</title>
-</svelte:head>
-
 <Octocat />
 <section id="map"
     bind:this={mapNode}/>
